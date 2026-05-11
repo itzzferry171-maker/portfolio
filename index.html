@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferrence Tjokrokario | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .home-hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+        .hero-stack { display: flex; flex-direction: column; align-items: center; gap: 25px; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 4.5rem; color: var(--gold); margin: 0; }
+        .role-text { font-size: 1.2rem; letter-spacing: 3px; text-transform: uppercase; }
+        .badges span { border: 1px solid var(--gold); padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; margin: 0 5px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">FT<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About</a></li>
+            <li><a href="work.html" data-i18n="nav.work">Work</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <div class="lang-switcher">
+            <button type="button" class="lang-btn active" data-lang="en">EN</button>
+            <button type="button" class="lang-btn" data-lang="nl">NL</button>
+        </div>
+    </nav>
+
+    <header class="home-hero fade-init">
+        <div class="hero-stack">
+            <h1>Ferrence Tjokrokario</h1>
+            <p class="role-text" data-i18n="hero.role">ICT Professional & System Specialist</p>
+            <div class="badges">
+                <span data-i18n="hero.badge1">IT Medewerker</span>
+                <span data-i18n="hero.badge2">SNE Student</span>
+                <span data-i18n="hero.badge3">Entrepreneur</span>
+                <span data-i18n="hero.badge4">Freelancer</span>
+            </div>
+            <a href="work.html" class="btn-gold" data-i18n="hero.cta">Explore My Projects</a>
+        </div>
+    </header>
+
+    <footer>
+        <p data-i18n="footer.text">© 2026 Ferrence Tjokrokario. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

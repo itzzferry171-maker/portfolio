@@ -1,0 +1,89 @@
+
+.work-container { padding: 150px 10% 100px; min-height: 100vh;}
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+
+.project-card { 
+    background: var(--grey); 
+    border: 1px solid #333; 
+    border-radius: 4px; 
+    overflow: hidden; 
+    transition: all 0.4s ease;
+}
+
+.project-card:hover { 
+    border-color: var(--gold); 
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* Add this to handle project images perfectly */
+.project-card img {
+    width: 100%;
+    height: 250px;        /* Keeps all images exactly the same height */
+    object-fit: cover;    /* Crops the image perfectly without squishing it */
+    border-bottom: 1px solid #333;
+    display: block;
+}
+
+.project-info { padding: 30px; }
+.tech-tag { display: inline-block; margin-top: 10px; color: var(--gold); font-size: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;}
+
+.certifications-container {
+    padding: 60px 10%;
+    background: #0d0d0d;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.cert-card {
+    display: flex;
+    align-items: center;
+    background: var(--grey);
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.cert-icon {
+    font-size: 2rem;
+    margin-right: 15px;
+}
+
+.cert-card h4 {
+    color: var(--gold);
+    font-size: 1rem;
+    margin: 0;
+}
+
+contact.css
+
+CSS
+.contact-container { padding: 150px 10% 100px; min-height: 80vh; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;}
+
+.form-group { margin-bottom: 25px; }
+.form-group input, .form-group textarea {
+    width: 100%; padding: 18px; background: #111; border: 1px solid #333; color: white; font-family: 'Inter', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, .form-group textarea:focus { 
+    border-color: var(--gold); outline: none; 
+}
+
+/* Mobile responsive for Contact grid */
+@media (max-width: 768px) {
+    .contact-container { grid-template-columns: 1fr; }
+}
+
+/* Add this to handle project images perfectly */
+.project-card img {
+    width: 100%;
+    height: 250px;        /* Keeps all images exactly the same height */
+    object-fit: cover;    /* Crops the image perfectly without squishing it */
+    border-bottom: 1px solid #333;
+    display: block;
+}

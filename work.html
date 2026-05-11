@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work | Ferrence Tjokrokario</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/work.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">FT<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About</a></li>
+            <li><a href="work.html" data-i18n="nav.work">Work</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <div class="lang-switcher">
+            <button type="button" class="lang-btn active" data-lang="en">EN</button>
+            <button type="button" class="lang-btn" data-lang="nl">NL</button>
+        </div>
+    </nav>
+
+    <section class="work-container">
+        <h2 style="text-align:center; color:var(--gold); font-family:'Playfair Display', serif; margin-bottom:50px; font-size: 2.5rem;" data-i18n="work.title">Selected Projects</h2>
+        
+        <div class="project-grid">
+            <div class="project-card fade-init">
+                <div class="project-info">
+                    <h3 style="color:var(--white); margin-bottom: 10px;" data-i18n="work.project1.title">Smart Traffic Lights</h3>
+                    <p style="margin-bottom: 15px;" data-i18n="work.project1.desc">An intelligent traffic regulation prototype designed for Paramaribo, utilizing ESP32 microcontrollers and IR sensors to optimize traffic flow.</p>
+                    <span class="tech-tag" data-i18n="work.project1.tech">C++ | ESP32 | IoT</span>
+                </div>
+            </div>
+
+            <div class="project-card fade-init">
+                <div class="project-info">
+                    <h3 style="color:var(--white); margin-bottom: 10px;" data-i18n="work.project2.title">Decibel Corporation</h3>
+                    <p style="margin-bottom: 15px;" data-i18n="work.project2.desc">Custom automotive styling, audio systems, and electronics integration for high-performance vehicles.</p>
+                    <span class="tech-tag" data-i18n="work.project2.tech">Automotive Tech | Prototyping</span>
+                </div>
+            </div>
+        </div>
+
+        <section class="certifications-container">
+            <h2 style="color:var(--gold); text-align:center; margin-bottom:40px;">Certificaten & Trainingen</h2>
+            
+            <div class="cert-grid">
+                <div class="cert-card fade-init">
+                    <div class="cert-icon">📜</div>
+                    <div class="cert-info">
+                        <h4>[Naam Certificaat, bijv. CompTIA A+]</h4>
+                        <p>Uitgegeven door: [Instantie]</p>
+                    </div>
+                </div>
+
+                <div class="cert-card fade-init">
+                    <div class="cert-icon">📜</div>
+                    <div class="cert-info">
+                        <h4>[Naam Training, bijv. Windows Server Admin]</h4>
+                        <p>Behaald: 2023</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <footer>
+        <p data-i18n="footer.text">© 2026 Ferrence Tjokrokario. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

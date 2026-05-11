@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Ferrence Tjokrokario</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">FT<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About</a></li>
+            <li><a href="work.html" data-i18n="nav.work">Work</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <div class="lang-switcher">
+            <button type="button" class="lang-btn active" data-lang="en">EN</button>
+            <button type="button" class="lang-btn" data-lang="nl">NL</button>
+        </div>
+    </nav>
+
+    <section class="contact-container fade-init">
+        <div class="contact-details">
+            <h2 style="color:var(--gold); font-family:'Playfair Display', serif; margin-bottom: 20px;" data-i18n="contact.title">Lets Talk Bussines!</h2>
+            <p style="margin-bottom: 20px;" data-i18n="contact.desc">Whether you have a technical question, a project proposal, or just want to say hello, feel free to reach out.</p>
+            <p><strong data-i18n="contact.email.label">Email:</strong> <a href="mailto:itzzferry171@gmail.com" style="color:var(--gold); text-decoration:none;" data-i18n="contact.email">itzzferry171@gmail.com</a></p>
+            <p><strong data-i18n="contact.phone.label">Phone:</strong> <a href="tel:+597 8639113" style="color:var(--gold); text-decoration:none;" data-i18n="contact.phone">+597 8639113</a></p>
+            <p><strong data-i18n="contact.location.label">Location:</strong> <span data-i18n="contact.location">Paramaribo, Suriname</span></p>
+        </div>
+
+        <form class="contact-form">
+            <div class="form-group">
+                <input type="text" placeholder="Your Name" data-i18n-placeholder="contact.form.name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Your Email" data-i18n-placeholder="contact.form.email" required>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Your Message" data-i18n-placeholder="contact.form.message" rows="6" required></textarea>
+            </div>
+            <button type="submit" class="btn-gold" data-i18n="contact.form.submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p data-i18n="footer.text">© 2026 Ferrence Tjokrokario. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+/* Under the instruction of Ner Karso at UNASAT, I designed and implemented this portfolio project to demonstrate my proficiency in HTML, CSS, and JavaScript within the SNE program */
