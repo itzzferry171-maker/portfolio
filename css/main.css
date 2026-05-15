@@ -68,7 +68,21 @@ nav {
     border-color: var(--gold);
 }
 
-.logo { font-size: 1.8rem; font-weight: 700; color: var(--gold); }
+..logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
 .logo span { color: var(--white); }
 
 .nav-links { display: flex; list-style: none; }

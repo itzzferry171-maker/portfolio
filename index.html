@@ -10,6 +10,7 @@
         .home-hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; }
         .hero-stack { display: flex; flex-direction: column; align-items: center; gap: 25px; }
         h1 { font-family: 'Playfair Display', serif; font-size: 4.5rem; color: var(--gold); margin: 0; }
+        .greeting-text { font-size: 1.3rem; color: #fff; margin: 0; opacity: 0.9; }
         .role-text { font-size: 1.2rem; letter-spacing: 3px; text-transform: uppercase; }
         .badges span { border: 1px solid var(--gold); padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; margin: 0 5px; }
     </style>
@@ -31,13 +32,15 @@
 
     <header class="home-hero fade-init">
         <div class="hero-stack">
+            <p class="greeting-text">Hello there! My name is</p>
             <h1>Ferrence Tjokrokario</h1>
             <p class="role-text" data-i18n="hero.role">ICT Professional & System Specialist</p>
             <div class="badges">
-                <span data-i18n="hero.badge1">IT Medewerker</span>
-                <span data-i18n="hero.badge2">SNE Student</span>
-                <span data-i18n="hero.badge3">Entrepreneur</span>
-                <span data-i18n="hero.badge4">Freelancer</span>
+                <span data-i18n="hero.badge1">IT Specialist</span>
+                <span data-i18n="hero.badge2">Infrastructure & Network Engineer</span>
+                <span data-i18n="hero.badge3">SNE Student</span>
+                <span data-i18n="hero.badge4">Entrepreneur</span>
+                <span data-i18n="hero.badge5">Freelancer</span>
             </div>
             <a href="work.html" class="btn-gold" data-i18n="hero.cta">Explore My Projects</a>
         </div>

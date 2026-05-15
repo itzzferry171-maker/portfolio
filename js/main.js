@@ -5,10 +5,11 @@ const translations = {
         'nav.work': 'Work',
         'nav.contact': 'Contact',
         'hero.role': 'ICT Professional & System Specialist',
-        'hero.badge1': 'IT Medewerker',
-        'hero.badge2': 'SNE Student',
-        'hero.badge3': 'Entrepreneur',
-        'hero.badge4': 'Freelancer',
+        'hero.badge1': 'IT Specialist',
+        'hero.badge2': 'Infrastructure & Network Engineer',
+        'hero.badge3': 'SNE Student',
+        'hero.badge4': 'Entrepreneur',
+        'hero.badge5': 'Freelancer',
         'hero.cta': 'Explore My Projects',
         'footer.text': '© 2026 Ferrence Tjokrokario. All Rights Reserved.',
         'about.title': 'Ferrence MDL Tjokrokario',
@@ -24,9 +25,18 @@ const translations = {
         'work.project1.title': 'Smart Traffic Lights',
         'work.project1.desc': 'An intelligent traffic regulation prototype designed for Paramaribo, utilizing ESP32 microcontrollers and IR sensors to optimize traffic flow.',
         'work.project1.tech': 'C++ | ESP32 | IoT',
-        'work.project2.title': 'Decibel Corporation',
-        'work.project2.desc': 'Custom automotive styling, audio systems, and electronics integration for high-performance vehicles.',
-        'work.project2.tech': 'Automotive Tech | Prototyping',
+        'work.project2.title': 'Networking & Systems',
+        'work.project2.desc': 'Cisco/network management (N+ certified), server administration, P2P links, VPN tunnels, and system operations.',
+        'work.project2.tech': 'CISCO | Fortinet | Ubiquiti',
+        'work.project3.title': 'Physical Infrastructure',
+        'work.project3.desc': 'Fiber optic assembly, copper network terminations, and server room architecture for clean, professional installations.',
+        'work.project3.tech': 'Fiber Optic | Copper Cabling | Data Centers',
+        'work.project4.title': 'Security & Automation',
+        'work.project4.desc': 'Enterprise CCTV systems, access control, and advanced alarm systems for high-security environments.',
+        'work.project4.tech': 'Security | Automation',
+        'work.project5.title': 'Decibel Corporation',
+        'work.project5.desc': 'Custom automotive styling, audio systems, and electronics integration for high-performance vehicles.',
+        'work.project5.tech': 'Automotive Tech | Prototyping',
         'contact.title': 'Contact us',
         'contact.desc': 'Whether you have a technical question, a project proposal, or just want to say hello, feel free to reach out.',
         'contact.email.label': 'Email:',
@@ -46,10 +56,11 @@ const translations = {
         'nav.work': 'Werk',
         'nav.contact': 'Contact',
         'hero.role': 'ICT Professional & Systeem Specialist',
-        'hero.badge1': 'IT Medewerker',
-        'hero.badge2': 'SNE Student',
-        'hero.badge3': 'Ondernemer',
-        'hero.badge4': 'Freelancer',
+        'hero.badge1': 'IT Specialist',
+        'hero.badge2': 'Infrastructure & Network Engineer',
+        'hero.badge3': 'SNE Student',
+        'hero.badge4': 'Ondernemer',
+        'hero.badge5': 'Freelancer',
         'hero.cta': 'Bekijk Mijn Projecten',
         'footer.text': '© 2026 Ferrence Tjokrokario. Alle rechten voorbehouden.',
         'about.title': 'Ferrence MDL Tjokrokario',
@@ -65,15 +76,24 @@ const translations = {
         'work.project1.title': 'Slimme Verkeerslichten',
         'work.project1.desc': 'Een prototype voor intelligente verkeersregeling voor Paramaribo, met ESP32-microcontrollers en IR-sensoren om de doorstroming te optimaliseren.',
         'work.project1.tech': 'C++ | ESP32 | IoT',
-        'work.project2.title': 'Decibel Corporation',
-        'work.project2.desc': 'Maatwerk auto-styling, audiosystemen en elektronica-integratie voor high-performance voertuigen.',
-        'work.project2.tech': 'Automotive Tech | Prototyping',
+        'work.project2.title': 'Netwerk & Systemen',
+        'work.project2.desc': 'Cisco/netwerkbeheer (N+ gecertificeerd), serverbeheer, P2P-verbindingen, VPN-tunnels en systeemoperaties.',
+        'work.project2.tech': 'CISCO | Fortinet | Ubiquiti',
+        'work.project3.title': 'Fysieke Infrastructuur',
+        'work.project3.desc': 'Fiber-optische montage, kopernetwerk-terminaties en serverruimte-architectuur voor nette, professionele installaties.',
+        'work.project3.tech': 'Fiber Optic | Copper Cabling | Data Centers',
+        'work.project4.title': 'Beveiliging & Automatisering',
+        'work.project4.desc': 'Enterprise CCTV-systemen, toegangscontrole en geavanceerde alarmsystemen voor hoogwaardige beveiliging.',
+        'work.project4.tech': 'Beveiliging | Automatisering',
+        'work.project5.title': 'Decibel Corporation',
+        'work.project5.desc': 'Maatwerk auto-styling, audiosystemen en elektronica-integratie voor high-performance voertuigen.',
+        'work.project5.tech': 'Automotive Tech | Prototyping',
         'contact.title': 'Neem Contact Op',
         'contact.desc': 'Of je nu een technische vraag hebt, een projectvoorstel wilt doen, of gewoon wilt groeten, neem gerust contact op.',
         'contact.email.label': 'E-mail:',
         'contact.phone.label': 'Telefoon:',
         'contact.location.label': 'Locatie:',
-        'contact.email': 'itzzferry1771@gmail.com',
+        'contact.email': 'itzzferry171@gmail.com',
         'contact.phone': '+597 863-9113',
         'contact.location': 'Paramaribo, Suriname',
         'contact.form.name': 'Je Naam',
@@ -89,21 +109,21 @@ function translatePage(lang) {
 
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        if (dictionary[key]) {
+        if (Object.prototype.hasOwnProperty.call(dictionary, key)) {
             el.textContent = dictionary[key];
         }
     });
 
     document.querySelectorAll('[data-i18n-html]').forEach(el => {
         const key = el.getAttribute('data-i18n-html');
-        if (dictionary[key]) {
+        if (Object.prototype.hasOwnProperty.call(dictionary, key)) {
             el.innerHTML = dictionary[key];
         }
     });
 
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
         const key = el.getAttribute('data-i18n-placeholder');
-        if (dictionary[key]) {
+        if (Object.prototype.hasOwnProperty.call(dictionary, key)) {
             el.placeholder = dictionary[key];
         }
     });
