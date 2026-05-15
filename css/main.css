@@ -17,11 +17,26 @@ html {
 }
 
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/projects/foto.jpg);
+    position: relative;
+    min-height: 100vh;
     background-color: var(--black);
     color: var(--white);
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../img/back-ground-photo.jpg);
+    background-size: 90% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(6px);
+    transform: scale(1);
 }
 
 .background-container {
@@ -42,6 +57,31 @@ nav {
     top: 0;
     z-index: 1000;
     border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    padding: 10px 15px;
+    border-radius: 999px;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+    display: inline-block;
+}
+
+.nav-links a:hover {
+    background: var(--gold);
+    color: #000;
+    transform: translateY(-1px);
 }
 
 .lang-switcher {
@@ -86,21 +126,21 @@ nav {
 
 .logo span { color: var(--white); }
 
-.nav-links { display: flex; list-style: none; }
-.nav-links li { margin-left: 30px; }
-.nav-links a { 
-    color: white; 
-    text-decoration: none; 
-    text-transform: uppercase; 
-    font-size: 0.8rem; 
-    letter-spacing: 2px; 
-    /* This creates the smooth fade when hovering */
-    transition: color 0.3s ease; 
-}
+.home-hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+.hero-stack { display: flex; flex-direction: column; align-items: center; gap: 25px; }
+.hero-stack h1 { font-family: 'Playfair Display', serif; font-size: 4.5rem; color: var(--gold); margin: 0; }
+.greeting-text { font-size: 1.3rem; color: #fff; margin: 0; opacity: 0.9; }
+.role-text { font-size: 1.2rem; letter-spacing: 3px; text-transform: uppercase; }
+.badges span { border: 1px solid var(--gold); padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; margin: 0 5px; }
 
-.nav-links a:hover { 
-    color: var(--gold); 
-}
+.gold-heading { color: var(--gold); font-family: 'Playfair Display', serif; margin-bottom: 20px; }
+.section-description { margin-bottom: 20px; color: #ccc; }
+.gold-link { color: var(--gold); text-decoration: none; }
+.gold-link:hover { text-decoration: underline; }
+.text-center { text-align: center; }
+.section-title-large { font-size: 2.5rem; }
+..project-heading { color: var(--white); margin-bottom: 10px; }
+.project-description { margin-bottom: 15px; }
 
 /* Buttons */
 .btn-gold { 

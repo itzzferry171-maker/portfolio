@@ -10,8 +10,7 @@
     width: 250px; /* Adjust size */
     height: 250px; /* Adjust size */
     border-radius: 50%; /* Make it circular (optional) */
-    /* ADD YOUR PROFILE PICTURE FILENAME HERE */
-    background-image: url(../img/projects/project-1.jpg); 
+    background-image: url(../img/projects/profile-pic.jpg);
     background-size: cover;
     background-position: center;
     border: 3px solid var(--gold); /* Optional gold border */
@@ -34,8 +33,7 @@
 .about-hero {
 position: relative;
 padding: 180px 10% 100px;
-/* Make sure you put a picture named project-1.jpg inside your img/projects folder! */
-background-image: url(../img/projects/project-1.jpg);
+background-image: url(../img/projects/profile-pic.jpg);
 background-size: cover;
 background-position: center;
 background-attachment: fixed;
