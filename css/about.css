@@ -37,6 +37,22 @@
     box-sizing: border-box;
 }
 
+.about-subheading {
+    color: #ccc;
+    font-size: 1.1rem;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+.about-intro-text {
+    margin-top: 15px;
+}
+
+.edu-note {
+    margin-top: 5px;
+    font-style: italic;
+}
+
 .about-content { 
     position: relative; 
     z-index: 2; 

@@ -1,5 +1,11 @@
 .contact-container { padding: 140px 10% 60px; min-height: 80vh; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
 
+.contact-subtitle {
+    margin-bottom: 25px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
 .contact-details h2.professional-heading {
     font-size: 2rem !important; 
     margin-bottom: 15px;
