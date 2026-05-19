@@ -1,84 +1,196 @@
-/* Add this to style your biography section with an image */
-.bio-section {
-    display: flex;
-    align-items: center;
-    gap: 30px;
+.about-hero {
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 80px;
+    display: block;
+    width: 100%;
+}
+
+.about-hero::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('../img/profile/profile-pic.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1.05);
+}
+
+.overlay { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: transparent; 
+    z-index: 1; 
+}
+
+/* HET ANKER: Trekt alles strak gelijk met de navbar */
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+/* De hoofd grid voor Desktop */
+.about-content { 
+    position: relative; 
+    z-index: 2; 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 60px; 
+    width: 100%; 
     margin-bottom: 50px;
 }
 
+.name-heading { color: var(--gold); font-size: 2.4rem !important; margin-bottom: 10px; }
+.gold-heading { color: var(--gold); font-size: 1.8rem; margin-bottom: 20px; }
+.text-center { text-align: center; }
+
+.bio-section { 
+    display: flex; 
+    flex-direction: row;       
+    align-items: center;       
+    gap: 30px; 
+    grid-column: span 1; 
+}
+
 .bio-image-container {
-    width: 250px; /* Adjust size */
-    height: 250px; /* Adjust size */
-    border-radius: 50%; /* Make it circular (optional) */
-    background-image: url(../img/projects/profile-pic.jpg);
+    width: 200px;  
+    height: 200px; 
+    border-radius: 50%; 
+    background-image: url(../img/profile/profile-pic.jpg);
     background-size: cover;
     background-position: center;
-    border: 3px solid var(--gold); /* Optional gold border */
+    border: 3px solid var(--gold); 
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    flex-shrink: 0; 
 }
 
-.bio-text {
-    flex: 1; /* Occupy remaining space */
+.about-extended-content { position: relative; z-index: 2; display: flex; flex-direction: column; gap: 70px; width: 100%; }
+
+.timeline-section { max-width: 900px; width: 100%; margin: 0 auto; }
+.timeline-container { border-left: 2px solid #222; padding-left: 20px; position: relative; margin-top: 25px; }
+.timeline-item { position: relative; margin-bottom: 40px; }
+.timeline-dot { position: absolute; width: 12px; height: 12px; background: var(--gold); border-radius: 50%; left: -27px; top: 6px; box-shadow: 0 0 8px var(--gold); }
+.timeline-date { font-size: 0.85rem; color: var(--gold); font-weight: 600; display: block; margin-bottom: 4px; }
+.timeline-item h4 { font-size: 1.15rem; color: var(--white); margin-bottom: 2px; }
+.timeline-item h5 { font-size: 0.9rem; color: #888; font-weight: 400; margin-bottom: 10px; }
+.timeline-item p { color: #ccc; font-size: 0.9rem; }
+
+.education-section { width: 100%; }
+.education-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 25px; }
+.edu-card { background: rgba(26, 26, 26, 0.5); padding: 30px; border-left: 4px solid var(--gold); border-radius: 6px; border: 1px solid #1f1f1f; }
+.year { color: var(--gold); font-size: 0.85rem; font-weight: 600; }
+.edu-card h4 { margin: 8px 0; font-size: 1.1rem; color: var(--white); }
+.edu-card p { color: #aaa; font-size: 0.9rem; }
+
+.custom-container-box {
+    background: rgba(15, 15, 15, 0.6);
+    border: 1px dashed #333;
+    padding: 40px;
+    border-radius: 6px;
+    margin-top: 20px;
 }
 
-.greeting-text {
-    font-size: 1.2rem;
-    color: #ffffff;
-    margin-bottom: 18px;
-    line-height: 1.4;
-    max-width: 520px;
-}
-/* ... rest of about.css ... */
-
-.about-hero {
-position: relative;
-padding: 180px 10% 100px;
-background-image: url(../img/projects/profile-pic.jpg);
-background-size: cover;
-background-position: center;
-background-attachment: fixed;
-min-height: 100vh;
-display: flex;
-align-items: center;
+.interest-section {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 20px; 
 }
 
-.overlay {
-position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-background: rgba(0, 0, 0, 0.85); z-index: 1;
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); 
+    gap: 15px;
+    width: 100%;
 }
 
-.about-content {
-position: relative; z-index: 2;
-display: grid; grid-template-columns: 1fr 1fr; gap: 60px; width: 100%;
+.interest-card {
+    background: rgba(26, 26, 26, 0.5);
+    border: 1px solid #222;
+    padding: 15px;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: border-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px; 
+}
+.interest-card:hover { border-color: var(--gold); }
+
+.expert-container {
+    text-align: left;
+    line-height: 1.6;
+    margin-top: 20px;
 }
 
-.edu-card {
-background: rgba(26, 26, 26, 0.7);
-padding: 40px;
-border-left: 4px solid var(--gold);
-border-radius: 4px;
+.expert-container p {
+    color: #ccc; 
+    margin-bottom: 15px;
 }
 
-.edu-item {
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #222;
-}
-.status {
+.gold-title {
     color: var(--gold);
-    font-size: 0.7rem;
-    text-transform: uppercase;
     font-weight: bold;
 }
-.year {
-    color: #888;
-    font-size: 0.8rem;
-}
-.edu-item h4 {
-    margin: 5px 0;
-}
 
-/* Mobile responsive for About grid */
+/* ==========================================================================
+   RESPONSIVE MOBILE FIX (Geoptimaliseerd voor 360x800)
+   ========================================================================== */
 @media (max-width: 768px) {
-.about-content { grid-template-columns: 1fr; }
+    .about-hero {
+        padding-top: 100px !important;
+        padding-bottom: 40px !important;
+    }
+
+    /* Dwingt de foto en intro BÓVEN de biografie-tekst */
+    .about-content {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+
+    /* Centreert de profielfoto netjes op je telefoonscherm */
+    .bio-section {
+        flex-direction: column !important;
+        text-align: center !important;
+        align-items: center !important;
+        gap: 15px !important;
+    }
+
+    .bio-image-container {
+        width: 150px !important; /* Iets compacter op mobiel */
+        height: 150px !important;
+    }
+
+    .professional-heading, 
+    .section-title-large,
+    h2 {
+        font-size: 1.6rem !important; 
+        margin-bottom: 15px !important;
+        text-align: center !important;
+    }
+
+    .bio-text-intro h3 {
+        text-align: center !important;
+    }
+
+    /* Zet ook de opleidingen netjes onder elkaar */
+    .education-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .custom-container-box {
+        padding: 20px !important;
+    }
 }

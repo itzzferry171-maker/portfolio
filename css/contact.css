@@ -1,32 +1,30 @@
-.contact-container { padding: 150px 10% 100px; min-height: 80vh; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;}
+.contact-container { padding: 140px 10% 60px; min-height: 80vh; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
 
-.form-group { margin-bottom: 25px; }
+/* Resize the main Contact Us heading */
+.contact-details h2.professional-heading {
+    font-size: 2rem !important; 
+    margin-bottom: 15px;
+    color: var(--gold)
+}
+
+.gold-link { color: var(--gold); text-decoration: none; }
+.gold-link:hover { text-decoration: underline; }
+
+/* Custom color rule targeting highlighted contact metadata content tags */
+.highlighted-location-text {
+    color: #D4AF37; 
+    font-weight: 600;
+}
+
+.form-group { margin-bottom: 20px; }
 .form-group input, .form-group textarea {
-    width: 100%; padding: 18px; background: #111; border: 1px solid #333; color: white; font-family: 'Inter', sans-serif;
+    width: 100%; padding: 16px; background: #111; border: 1px solid #222; color: white; font-family: 'Inter', sans-serif; border-radius: 6px;
     transition: border-color 0.3s ease;
 }
+.form-group input:focus, .form-group textarea:focus { border-color: var(--gold); outline: none; }
+.form-group textarea { resize: vertical; }
+.form-group input::placeholder, .form-group textarea::placeholder { color: #555; }
 
-.form-group input:focus, .form-group textarea:focus { 
-    border-color: var(--gold); outline: none; 
-}
-
-/* Mobile responsive for Contact grid */
 @media (max-width: 768px) {
-    .contact-container { grid-template-columns: 1fr; }
-}
-.form-group textarea {
-    resize: vertical;
-}
-
-/* Add this to make the placeholder text look premium */
-.form-group input::placeholder, 
-.form-group textarea::placeholder {
-    color: #666;
-    font-weight: 300;
-}
-
-/* Optional: Add a subtle hover effect before they click */
-.form-group input:hover, 
-.form-group textarea:hover {
-    background: #151515;
+    .contact-container { grid-template-columns: 1fr; gap: 40px; }
 }

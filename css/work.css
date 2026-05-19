@@ -1,89 +1,106 @@
+.work-container { padding: 140px 10% 60px; min-height: 100vh; }
+.section-title-large { font-size: 2.6rem; margin-bottom: 40px; }
 
-.work-container { padding: 150px 10% 100px; min-height: 100vh;}
-.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+/* De hoofdcontainer: we halen de knellende 10% padding weg */
+.work-container { 
+    padding: 140px 5% 60px !important; /* Matcht nu perfect met de nav-balk padding */
+    max-width: 1200px; /* Zorgt dat het niet té breed wordt op gigantische schermen */
+    margin: 0 auto;    /* Centreert de hele pagina netjes */
+    min-height: 100vh; 
+}
 
+.section-title-large { 
+    font-size: 2.6rem; 
+    margin-bottom: 40px; 
+    padding-left: 15px; /* Lopt nu perfect gelijk met de linkerkant van je kaarten */
+}
+
+/* De grid/flex container */
+.project-grid { 
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 25px !important; 
+    width: 100% !important;
+    margin-bottom: 60px;
+    padding: 0 15px; /* Zorgt voor een kleine veilige marge op mobiel */
+}
+
+/* De kaarten: even breed als de rest van de pagina-elementen daaronder */
 .project-card { 
-    background: var(--grey); 
-    border: 1px solid #333; 
-    border-radius: 4px; 
-    overflow: hidden; 
-    transition: all 0.4s ease;
+    background: rgba(26, 26, 26, 0.7) !important; /* Transparant */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    
+    border: 1px solid #222 !important; 
+    border-radius: 6px; 
+    width: 100% !important; /* Neemt nu de volledige breedte van de kolom in */
+    transition: all 0.4s ease; 
 }
 
 .project-card:hover { 
-    border-color: var(--gold); 
-    transform: translateY(-10px); 
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    border-color: var(--gold) !important; 
+    transform: translateY(-3px); 
 }
 
-/* Add this to handle project images perfectly */
-.project-card img {
-    width: 100%;
-    height: 250px;        /* Keeps all images exactly the same height */
-    object-fit: cover;    /* Crops the image perfectly without squishing it */
-    border-bottom: 1px solid #333;
-    display: block;
+.project-info { 
+    padding: 30px !important; 
 }
 
-.project-info { padding: 30px; }
-.tech-tag { display: inline-block; margin-top: 10px; color: var(--gold); font-size: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;}
-
-.certifications-container {
-    padding: 60px 10%;
-    background: #0d0d0d;
+.project-card {
+    /* Dit vervangt var(--grey) voor een transparante donkere kleur (80% dekkend) */
+    background: rgba(26, 26, 26, 0.5) !important; 
+    
+    /* De rest van je instellingen laat je gewoon staan */
+    border: 1px solid #222; 
+    border-radius: 6px; 
+    transition: all 0.4s ease;
 }
 
-.cert-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+/* De gouden tags onderaan de kaarten */
+.tech-tag { 
+    display: inline-block; 
+    color: var(--gold); 
+    font-size: 0.75rem; 
+    font-weight: bold; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: auto; /* Duwt de tag gegarandeerd naar de bodem van de card */
 }
 
-.cert-card {
-    display: flex;
-    align-items: center;
-    background: var(--grey);
-    padding: 20px;
-    border: 1px solid #333;
-    border-radius: 5px;
+@media (max-width: 480px) {
+    .work-container {
+        padding: 100px 20px 40px !important; 
+    }
+    .section-title-large {
+        font-size: 1.8rem !important; 
+        margin-bottom: 25px !important;
+        padding-left: 0 !important;  
+        text-align: left;
+    }
+    .project-info {
+        padding: 20px !important; 
+    }
+    .project-info h3 {
+        font-size: 1.15rem !important; 
+    }
 }
+.tech-tag { display: inline-block; color: var(--gold); font-size: 0.75rem; font-weight: bold; margin-top: 15px; }
 
-.cert-icon {
-    font-size: 2rem;
-    margin-right: 15px;
-}
+.certifications-container { padding: 40px 0; }
+.cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.cert-card { display: flex; align-items: center; background: rgba(20, 20, 20, 0.6); padding: 20px; border: 1px solid #222; border-radius: 6px; }
+.cert-icon { font-size: 1.8rem; margin-right: 15px; color: var(--gold); }
+.cert-card h4 { color: var(--white); font-size: 1rem; margin-bottom: 4px; }
+.cert-card p { color: #777; font-size: 0.8rem; }
 
-.cert-card h4 {
-    color: var(--gold);
-    font-size: 1rem;
-    margin: 0;
-}
+/* Visual layout modifier rule for empty certification card state component */
+.empty-cert-placeholder { border-style: dashed; border-color: #444; background: transparent; }
 
-contact.css
-
-CSS
-.contact-container { padding: 150px 10% 100px; min-height: 80vh; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;}
-
-.form-group { margin-bottom: 25px; }
-.form-group input, .form-group textarea {
-    width: 100%; padding: 18px; background: #111; border: 1px solid #333; color: white; font-family: 'Inter', sans-serif;
-    transition: border-color 0.3s ease;
-}
-
-.form-group input:focus, .form-group textarea:focus { 
-    border-color: var(--gold); outline: none; 
-}
-
-/* Mobile responsive for Contact grid */
 @media (max-width: 768px) {
-    .contact-container { grid-template-columns: 1fr; }
-}
-
-/* Add this to handle project images perfectly */
-.project-card img {
-    width: 100%;
-    height: 250px;        /* Keeps all images exactly the same height */
-    object-fit: cover;    /* Crops the image perfectly without squishing it */
-    border-bottom: 1px solid #333;
-    display: block;
+    /* Zorgt dat je vette projecten of certificaten direct zichtbaar zijn */
+    .work-hero, 
+    .work-container,
+    .page-work section:first-of-type {
+        padding-top: 180px !important;
+    }
 }
