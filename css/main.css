@@ -77,7 +77,6 @@ nav {
 }
 .lang-btn.active { border-color: var(--gold); color: var(--gold); background: rgba(212, 175, 55, 0.1); }
 
-/* Unified Professional Heading Style Rule Descriptor */
 .professional-heading {
     font-family: 'Space Grotesk', sans-serif !important;
     text-transform: uppercase;
@@ -105,25 +104,19 @@ footer { text-align: center; padding: 30px; background: #050505; font-size: 0.8r
 .fade-init { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
 .fade-init.visible { opacity: 1; transform: translateY(0); }
 
-/* ==========================================================================
-   HOME PAGE MOBILE FIX (Voor schermen zoals 360x800)
-   ========================================================================== */
 
 @media (max-width: 480px) {
-    /* Maakt de gigantische titel op de home-pagina perfect passend op mobiel */
     .home-hero h1 {
-        font-size: 1.8rem !important; /* Verlaagd van 2.4rem naar 1.8rem voor 360x800 schermen */
+        font-size: 1.8rem !important; 
         line-height: 1.3 !important;
         margin-bottom: 15px !important;
     }
 
-    /* Als je een ondertitel of sub-heading (p) in je hero hebt: */
     .home-hero p {
         font-size: 1rem !important;
         line-height: 1.5 !important;
     }
     
-    /* Zorgt dat de knoppen op de homepagina niet tegen de randen plakken */
     .hero-buttons {
         display: flex;
         flex-direction: column;
@@ -131,11 +124,7 @@ footer { text-align: center; padding: 30px; background: #050505; font-size: 0.8r
         gap: 15px;
     }
 }
-/* ==========================================================================
-   Page Specific Backgrounds (Home, Work, Contact Only)
-   ========================================================================== */
 
-/* 1. Apply the blurred background structure on specific pages */
 body.page-home::before,
 body.page-work::before,
 body.page-contact::before {
@@ -143,16 +132,14 @@ body.page-contact::before {
     position: fixed;
     inset: 0;
     z-index: -1;
-    /* Dark gradient overlay ensures your white text remains beautifully readable */
     background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../img/back-ground-photo.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: blur(10px); /* Clean 10% depth blur effect */
-    transform: scale(1.05); /* Eliminates white edges caused by the blur */
+    filter: blur(10px);
+    transform: scale(1.05);
 }
 
-/* 2. Prevent the main site background image from leaking into the About page */
 body.page-about::before {
     display: none !important;
 }

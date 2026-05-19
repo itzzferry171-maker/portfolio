@@ -28,7 +28,6 @@
     z-index: 1; 
 }
 
-/* HET ANKER: Trekt alles strak gelijk met de navbar */
 .about-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -38,7 +37,6 @@
     box-sizing: border-box;
 }
 
-/* De hoofd grid voor Desktop */
 .about-content { 
     position: relative; 
     z-index: 2; 
@@ -144,22 +142,17 @@
     font-weight: bold;
 }
 
-/* ==========================================================================
-   RESPONSIVE MOBILE FIX (Geoptimaliseerd voor 360x800)
-   ========================================================================== */
 @media (max-width: 768px) {
     .about-hero {
         padding-top: 100px !important;
         padding-bottom: 40px !important;
     }
 
-    /* Dwingt de foto en intro BÓVEN de biografie-tekst */
     .about-content {
         grid-template-columns: 1fr !important;
         gap: 30px !important;
     }
 
-    /* Centreert de profielfoto netjes op je telefoonscherm */
     .bio-section {
         flex-direction: column !important;
         text-align: center !important;
@@ -168,7 +161,7 @@
     }
 
     .bio-image-container {
-        width: 150px !important; /* Iets compacter op mobiel */
+        width: 150px !important; 
         height: 150px !important;
     }
 
@@ -184,7 +177,6 @@
         text-align: center !important;
     }
 
-    /* Zet ook de opleidingen netjes onder elkaar */
     .education-grid {
         grid-template-columns: 1fr !important;
         gap: 20px !important;

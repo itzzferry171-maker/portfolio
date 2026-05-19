@@ -1,6 +1,5 @@
 .contact-container { padding: 140px 10% 60px; min-height: 80vh; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
 
-/* Resize the main Contact Us heading */
 .contact-details h2.professional-heading {
     font-size: 2rem !important; 
     margin-bottom: 15px;
@@ -10,7 +9,6 @@
 .gold-link { color: var(--gold); text-decoration: none; }
 .gold-link:hover { text-decoration: underline; }
 
-/* Custom color rule targeting highlighted contact metadata content tags */
 .highlighted-location-text {
     color: #D4AF37; 
     font-weight: 600;
@@ -27,4 +25,44 @@
 
 @media (max-width: 768px) {
     .contact-container { grid-template-columns: 1fr; gap: 40px; }
+}
+
+.contact-container {
+    padding-top: 100px !important; 
+}
+
+.social-icon-links {
+    display: flex;
+    gap: 25px; 
+    margin-top: 30px; 
+    align-items: center;
+}
+
+.social-svg-link {
+    color: var(--gold); 
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.social-svg-link svg {
+    width: 28px; 
+    height: 28px;
+    display: block;
+}
+
+.social-svg-link:hover {
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.decibel-social:hover {
+    color: var(--gold);
+    filter: drop-shadow(0 0 8px var(--gold));
+}
+
+@media (max-width: 768px) {
+    .social-icon-links {
+        justify-content: center; 
+        margin-top: 25px;
+    }
 }
