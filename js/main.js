@@ -218,7 +218,7 @@ const translations = {
         'work.issuedByDecibel': 'Uitgegeven door: Decibel Corporation 2025',
         'work.modal.heading': 'Projectoverzicht en uitvoering',
         'work.gallery.empty': 'Er zijn geen afbeeldingen beschikbaar voor dit project.',
-        'contact.title': 'Neem Contact Op',
+        'contact.title': 'Neem Contact Op Met Mij!',
         'contact.subtitle': 'Als je vragen hebt, projectideeën of mogelijke samenwerkingen, stuur gerust een bericht. Laten we samen iets geweldigs bouwen.',
         'contact.email.label': 'E-mail:',
         'contact.phone.label': 'Telefoon:',
