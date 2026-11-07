@@ -143,3 +143,112 @@ body.page-contact::before {
 body.page-about::before {
     display: none !important;
 }
+
+.certificate-trigger {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.certificate-trigger:hover,
+.certificate-trigger:focus-visible {
+    color: var(--gold);
+    text-decoration: underline;
+    text-decoration-color: var(--gold);
+    text-underline-offset: 4px;
+}
+
+.certificate-preview {
+    position: absolute;
+    z-index: 1100;
+    top: calc(100% + 8px);
+    left: 0;
+    width: 190px;
+    max-height: 150px;
+    object-fit: contain;
+    padding: 5px;
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.65);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+}
+
+.certificate-trigger:hover .certificate-preview,
+.certificate-trigger:focus-visible .certificate-preview {
+    opacity: 1;
+    visibility: visible;
+}
+
+.certificate-viewer {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.92);
+}
+
+.certificate-viewer[hidden] {
+    display: none;
+}
+
+.certificate-viewer-content {
+    position: relative;
+    width: min(1100px, 100%);
+    max-height: 100%;
+    padding: 48px 24px 24px;
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    background: #141414;
+    text-align: center;
+}
+
+.certificate-viewer-title {
+    margin-bottom: 20px;
+    color: var(--gold);
+}
+
+.certificate-viewer-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.certificate-viewer-images img {
+    display: block;
+    max-width: 100%;
+    max-height: 78vh;
+    object-fit: contain;
+    background: #fff;
+}
+
+.certificate-viewer-close {
+    position: absolute;
+    top: 8px;
+    right: 14px;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.certificate-viewer-close:hover,
+.certificate-viewer-close:focus-visible {
+    color: var(--gold);
+}
