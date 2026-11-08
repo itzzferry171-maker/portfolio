@@ -48,21 +48,12 @@
     margin-top: 15px;
 }
 
-.cv-section {
-    background: rgba(15, 15, 15, 0.6);
-    border: 1px solid #333;
-    border-radius: 6px;
-    padding: 32px 40px;
-    text-align: center;
-}
-
-.cv-section .gold-heading {
-    margin-bottom: 14px;
+.cv-container-box {
+    margin-top: 20px;
 }
 
 .cv-subtitle {
-    max-width: 820px;
-    margin: 0 auto;
+    margin: 0;
     color: #ccc;
     line-height: 1.7;
 }
@@ -77,24 +68,23 @@
 
 .cv-button {
     display: inline-block;
-    padding: 12px 35px;
-    border: 1px solid #555;
+    padding: 10px 24px;
+    border: 1px solid var(--gold);
     border-radius: 50px;
     background: transparent;
-    color: #ccc;
+    color: var(--white);
     text-align: center;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .cv-button:hover,
 .cv-button:focus-visible {
-    transform: translateY(-3px);
-    border-color: var(--gold);
+    transform: translateY(-2px);
     background: var(--gold);
     color: #000;
-    box-shadow: 0 5px 18px rgba(212, 175, 55, 0.45);
+    box-shadow: 0 0 16px rgba(212, 175, 55, 0.55);
 }
 
 .edu-note {
@@ -251,7 +241,4 @@
         padding: 20px !important;
     }
 
-    .cv-section {
-        padding: 24px 20px;
-    }
 }
