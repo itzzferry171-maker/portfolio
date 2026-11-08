@@ -91,13 +91,77 @@ nav {
 }
 .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3); }
 
-.home-hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; }
-.hero-stack { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.home-hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 110px 5% 50px; }
+.hero-stack { display: flex; flex-direction: column; align-items: center; gap: 20px; width: 100%; }
 .home-hero h1 { font-size: 3.5rem; color: var(--gold); margin: 0; }
 .role-text { font-size: 1.1rem; letter-spacing: 3px; text-transform: uppercase; color: #ccc; }
 
 .badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 15px; }
 .badges span { border: 1px solid var(--gold); padding: 6px 14px; border-radius: 20px; font-size: 0.75rem; }
+
+.hero-intro-card {
+    width: min(720px, 100%);
+    margin: 5px auto 0;
+    padding: 24px 28px;
+    background: rgba(20, 20, 20, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-left: 4px solid var(--gold);
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.intro-welcome {
+    color: var(--gold);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.intro-text {
+    color: #e0e0e0;
+    font-size: 0.98rem;
+    line-height: 1.65;
+    margin-bottom: 12px;
+}
+
+.intro-text strong { color: var(--white); }
+
+.intro-callout {
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 10px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-outline {
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover,
+.btn-outline:focus-visible {
+    transform: translateY(-3px);
+    background: rgba(212, 175, 55, 0.15);
+    color: var(--white);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
+}
 
 footer { text-align: center; padding: 30px; background: #050505; font-size: 0.8rem; color: #555; }
 
@@ -123,6 +187,10 @@ footer { text-align: center; padding: 30px; background: #050505; font-size: 0.8r
         width: 100%;
         gap: 15px;
     }
+
+    .hero-intro-card { padding: 20px; }
+
+    .hero-buttons a { width: min(100%, 280px); }
 }
 
 body.page-home::before,
