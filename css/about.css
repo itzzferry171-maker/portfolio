@@ -51,8 +51,9 @@
 .cv-actions {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 14px;
-    margin-top: 24px;
+    margin-top: 0;
 }
 
 .cv-actions .btn-gold {
