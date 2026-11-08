@@ -48,6 +48,17 @@
     margin-top: 15px;
 }
 
+.cv-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 24px;
+}
+
+.cv-actions .btn-gold {
+    text-align: center;
+}
+
 .edu-note {
     margin-top: 5px;
     font-style: italic;
