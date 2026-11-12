@@ -24,7 +24,11 @@
 <body class="page-work">
     <nav>
         <div class="logo">FT<span>.</span></div>
-        <ul class="nav-links">
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" data-i18n-aria-label="nav.toggle" aria-expanded="false" aria-controls="primaryNav">
+            <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span class="visually-hidden" data-i18n="nav.menu">Menu</span>
+        </button>
+        <ul class="nav-links" id="primaryNav">
             <li><a href="index.html" data-i18n="nav.home">Home</a></li>
             <li><a href="about.html" data-i18n="nav.about">About</a></li>
             <li><a href="work.html" data-i18n="nav.work">Work</a></li>
@@ -38,6 +42,7 @@
 
     <section class="work-container">
         <h2 class="gold-heading text-center section-title-large professional-heading" data-i18n="work.title">Selected Projects</h2>
+        <p class="project-gallery-hint" data-i18n="work.gallery.hint">Curious how it all came together? Open any project to step inside the gallery.</p>
 
         <div class="project-grid">
 

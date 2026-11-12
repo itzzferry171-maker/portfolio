@@ -24,7 +24,11 @@
 <body class="page-home">
     <nav>
         <div class="logo">FT<span>.</span></div>
-        <ul class="nav-links">
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" data-i18n-aria-label="nav.toggle" aria-expanded="false" aria-controls="primaryNav">
+            <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span class="visually-hidden" data-i18n="nav.menu">Menu</span>
+        </button>
+        <ul class="nav-links" id="primaryNav">
             <li><a href="index.html" data-i18n="nav.home">Home</a></li>
             <li><a href="about.html" data-i18n="nav.about">About</a></li>
             <li><a href="work.html" data-i18n="nav.work">Work</a></li>
@@ -47,19 +51,23 @@
                 <span data-i18n="hero.badge4">Entrepreneur</span>
                 <span data-i18n="hero.badge5">Freelancer</span>
             </div>
-            <div class="hero-intro-card">
-                <p class="intro-welcome" data-i18n="hero.intro.welcome">Welcome! Thank you for stopping by.</p>
-                <p class="intro-text">
-                    <span data-i18n="hero.intro.text1.before">Driven by a deep curiosity for how complex systems connect and operate behind the scenes, my journey in IT has evolved into a dedicated passion for </span><strong data-i18n="hero.intro.text1.focus">System &amp; Network Engineering</strong><span data-i18n="hero.intro.text1.after"> and enterprise infrastructure.</span>
-                </p>
-                <p class="intro-text" data-i18n="hero.intro.text2">From securing critical corporate networks and optimizing high-density system operations to custom technical engineering, I focus on building reliable, high-performance solutions engineered for the real world.</p>
-                <p class="intro-callout">
-                    <em data-i18n="hero.intro.callout">Explore my featured projects below, or dive deeper into my professional background.</em>
-                </p>
+            <div class="hero-intro-shell">
+                <button class="hero-intro-trigger" type="button" aria-expanded="false" aria-controls="heroIntroCard" data-i18n="hero.intro.trigger">👋</button>
+                <div class="hero-intro-card" id="heroIntroCard" aria-hidden="true">
+                    <p class="intro-welcome" data-i18n="hero.intro.welcome">Welcome! Thank you for stopping by.</p>
+                    <p class="intro-text">
+                        <span data-i18n="hero.intro.text1.before">Driven by a deep curiosity for how complex systems connect and operate behind the scenes, my journey in IT has evolved into a dedicated passion for </span><strong data-i18n="hero.intro.text1.focus">System &amp; Network Engineering</strong><span data-i18n="hero.intro.text1.after"> and enterprise infrastructure.</span>
+                    </p>
+                    <p class="intro-text" data-i18n="hero.intro.text2">From securing critical corporate networks and optimizing high-density system operations to custom technical engineering, I focus on building reliable, high-performance solutions engineered for the real world.</p>
+                    <p class="intro-callout">
+                        <em data-i18n="hero.intro.callout">Explore my featured projects below, or dive deeper into my professional background.</em>
+                    </p>
+                </div>
             </div>
             <div class="hero-buttons">
                 <a href="work.html" class="btn-gold" data-i18n="hero.button">Explore My Projects</a>
                 <a href="about.html" class="btn-outline" data-i18n="hero.aboutButton">Read My Story</a>
+                <a href="about.html#cv" class="btn-outline" data-i18n="hero.cvButton">View My CV</a>
             </div>
         </div>
     </header>

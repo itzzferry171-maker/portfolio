@@ -13,6 +13,14 @@
     padding-left: 15px; 
 }
 
+.project-gallery-hint {
+    margin: -24px 15px 28px;
+    color: var(--gold);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-align: center;
+}
 
 .project-grid { 
     display: flex !important;
@@ -75,6 +83,10 @@
     }
     .project-info h3 {
         font-size: 1.15rem !important; 
+    }
+    .project-gallery-hint {
+        margin: -12px 0 22px;
+        text-align: left;
     }
 }
 .tech-tag { display: inline-block; color: var(--gold); font-size: 0.75rem; font-weight: bold; margin-top: 15px; }
@@ -157,6 +169,7 @@
     border-radius: 4px;
     border: 1px solid #333;
     transition: transform 0.3s ease;
+    cursor: zoom-in;
 }
 
 .modal-gallery img:hover {
@@ -166,6 +179,45 @@
 
 .modal-gallery video {
     background: #000;
+}
+
+.media-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 4000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 56px 24px 24px;
+    background: rgba(0, 0, 0, 0.96);
+}
+
+.media-lightbox[hidden] {
+    display: none;
+}
+
+.media-lightbox .is-expanded {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    cursor: zoom-out;
+}
+
+.media-lightbox-close {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 2.5rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.media-lightbox-close:hover,
+.media-lightbox-close:focus-visible {
+    color: var(--gold);
 }
 
 .gallery-empty {

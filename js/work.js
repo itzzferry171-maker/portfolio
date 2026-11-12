@@ -11,7 +11,23 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
+    const mediaLightbox = document.createElement('div');
+    mediaLightbox.className = 'media-lightbox';
+    mediaLightbox.hidden = true;
+    mediaLightbox.setAttribute('role', 'dialog');
+    mediaLightbox.setAttribute('aria-modal', 'true');
+
+    const closeLightboxBtn = document.createElement('button');
+    closeLightboxBtn.className = 'media-lightbox-close';
+    closeLightboxBtn.type = 'button';
+    closeLightboxBtn.setAttribute('aria-label', 'Close enlarged media');
+    closeLightboxBtn.textContent = '×';
+    mediaLightbox.appendChild(closeLightboxBtn);
+    document.body.appendChild(mediaLightbox);
+
     let activeCard = null;
+    let expandedMedia = null;
+    let mediaPlaceholder = null;
 
     const updateModalText = () => {
         if (!activeCard) return;
@@ -72,18 +88,56 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    modalGallery.addEventListener('click', event => {
+        const media = event.target.closest('img, video');
+        if (!media || !modalGallery.contains(media)) return;
+
+        if (expandedMedia === media) {
+            closeExpandedMedia();
+            return;
+        }
+
+        closeExpandedMedia();
+        expandedMedia = media;
+        expandedMedia.classList.add('is-expanded');
+        mediaPlaceholder = document.createComment('');
+        expandedMedia.before(mediaPlaceholder);
+        mediaLightbox.appendChild(expandedMedia);
+        mediaLightbox.hidden = false;
+    });
+
     closeBtn.addEventListener('click', closeModal);
+    closeLightboxBtn.addEventListener('click', closeExpandedMedia);
+    mediaLightbox.addEventListener('click', event => {
+        if (event.target === mediaLightbox || event.target === expandedMedia) closeExpandedMedia();
+    });
     window.addEventListener('click', event => {
         if (event.target === modal) closeModal();
     });
     window.addEventListener('keydown', event => {
-        if (event.key === 'Escape' && modal.style.display === 'block') closeModal();
+        if (event.key !== 'Escape') return;
+        if (expandedMedia) {
+            closeExpandedMedia();
+        } else if (modal.style.display === 'block') {
+            closeModal();
+        }
     });
     window.addEventListener('languagechange', updateModalText);
 
     function closeModal() {
+        closeExpandedMedia();
         modal.style.display = 'none';
         document.body.style.overflow = '';
         activeCard = null;
+    }
+
+    function closeExpandedMedia() {
+        if (!expandedMedia) return;
+        expandedMedia.classList.remove('is-expanded');
+        mediaPlaceholder.before(expandedMedia);
+        mediaPlaceholder.remove();
+        mediaPlaceholder = null;
+        expandedMedia = null;
+        mediaLightbox.hidden = true;
     }
 });

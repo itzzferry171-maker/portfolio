@@ -126,6 +126,26 @@
     flex-shrink: 0; 
 }
 
+.bio-image-container.is-pinned-origin {
+    visibility: hidden;
+}
+
+.profile-scroll-portrait {
+    position: fixed;
+    z-index: 999;
+    margin: 0;
+    pointer-events: none;
+    transition: top 0.75s cubic-bezier(0.2, 0.75, 0.25, 1), left 0.75s cubic-bezier(0.2, 0.75, 0.25, 1), width 0.75s cubic-bezier(0.2, 0.75, 0.25, 1), height 0.75s cubic-bezier(0.2, 0.75, 0.25, 1), box-shadow 0.75s ease;
+}
+
+.profile-scroll-portrait.is-pinned {
+    top: 82px !important;
+    left: 18px !important;
+    width: 78px !important;
+    height: 78px !important;
+    box-shadow: 0 0 18px rgba(212, 175, 55, 0.55);
+}
+
 .about-extended-content { position: relative; z-index: 2; display: flex; flex-direction: column; gap: 70px; width: 100%; }
 
 .timeline-section { max-width: 900px; width: 100%; margin: 0 auto; }
@@ -136,6 +156,50 @@
 .timeline-item h4 { font-size: 1.15rem; color: var(--white); margin-bottom: 2px; }
 .timeline-item h5 { font-size: 0.9rem; color: #888; font-weight: 400; margin-bottom: 10px; }
 .timeline-item p { color: #ccc; font-size: 0.9rem; }
+
+.timeline-highlights {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid rgba(212, 175, 55, 0.22);
+    border-left: 3px solid var(--gold);
+    border-radius: 6px;
+    background: rgba(15, 15, 15, 0.65);
+}
+
+.timeline-highlights h6 {
+    margin-bottom: 14px;
+    color: var(--gold);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+}
+
+.timeline-highlights ul {
+    display: grid;
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline-highlights li {
+    display: grid;
+    gap: 3px;
+    padding: 12px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.timeline-highlights li strong {
+    color: var(--white);
+    font-size: 0.9rem;
+}
+
+.timeline-highlights li span {
+    color: #bbb;
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
 
 .education-section { width: 100%; }
 .education-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 25px; }
@@ -220,12 +284,25 @@
         height: 150px !important;
     }
 
+    .profile-scroll-portrait.is-pinned {
+        top: 72px !important;
+        left: 12px !important;
+        width: 58px !important;
+        height: 58px !important;
+    }
+
     .professional-heading, 
     .section-title-large,
     h2 {
         font-size: 1.6rem !important; 
         margin-bottom: 15px !important;
         text-align: center !important;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .profile-scroll-portrait {
+            transition: none;
+        }
     }
 
     .bio-text-intro h3 {

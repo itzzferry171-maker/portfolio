@@ -8,15 +8,19 @@ const translations = {
         'nav.about': 'About',
         'nav.work': 'Work',
         'nav.contact': 'Contact',
+        'nav.menu': 'Menu',
+        'nav.toggle': 'Toggle navigation',
         'hero.role': 'ICT Professional & System Specialist',
-        'hero.greeting': 'Hello there! Welcome to my portfolio, my name is',
+        'hero.greeting': 'Hello there! My name is',
         'hero.intro.welcome': 'Welcome! Thank you for stopping by.',
         'hero.intro.text1.before': 'Driven by a deep curiosity for how complex systems connect and operate behind the scenes, my journey in IT has evolved into a dedicated passion for ',
         'hero.intro.text1.focus': 'System & Network Engineering',
         'hero.intro.text1.after': ' and enterprise infrastructure.',
         'hero.intro.text2': 'From securing critical corporate networks and optimizing high-density system operations to custom technical engineering, I focus on building reliable, high-performance solutions engineered for the real world.',
         'hero.intro.callout': 'Explore my featured projects below, or dive deeper into my professional background.',
+        'hero.intro.trigger': 'Explore My Professional Story',
         'hero.aboutButton': 'Read My Story',
+        'hero.cvButton': 'View My CV',
         'hero.badge1': 'IT Specialist',
         'hero.badge2': 'Infrastructure & Network Engineer',
         'hero.badge3': 'SNE Student',
@@ -40,13 +44,48 @@ const translations = {
         'about.workExperience': 'Work Experience',
         'about.year.today': '2025 - Today',
         'about.job1.role': 'IT Helpdesk Officer',
-        'about.job1.desc': 'Versatile IT support professional with experience extending well beyond standard first-line troubleshooting. Proven track record supporting higher-tier infrastructure engineering, preparing training documentation, and driving user adoption of new technology. Experienced in high-demand hospitality IT environments, with hands-on first line support during major enterprise transitions including Opera Cloud and SharePoint cloud migrations. Developed a strong corporate mindset, aligning daily technical operations with organizational goals, structured execution, and strategic vision.',
+        'about.job1.desc': 'Versatile IT support professional with experience extending well beyond standard first-line troubleshooting. Proven track record supporting higher-tier infrastructure engineering, preparing training documentation, and driving user adoption of new technology. Experienced in high-demand hospitality IT environments, with hands-on support during major enterprise transitions including Opera Cloud, NetSuite, and SharePoint cloud migrations. Developed a strong corporate mindset, aligning daily technical operations with organizational goals, structured execution, and strategic vision.',
         'about.job2.role': 'Infrastructure Technical Team Leader, Internal IT Advisory & Decision Support',
         'about.job2.desc': 'As IT Team Leader at OX88, I led a technical crew responsible for setting up, managing, and maintaining complete client IT and telecom infrastructures. Drawing on my telecom background, I directed a specialized troubleshooting team in partnership with Telesur, managing ADSL and Fiber to the Home (FTTH) fault resolution and technical operations inside neighborhood street cabinets (KVDs). I also trained and mentored team members and continually improved technical workflows to deliver faster, higher-quality solutions.',
         'about.job3.role': 'System Operator ~ System Administrator',
         'about.job3.desc': 'Actively modernized and expanded the company’s IT infrastructure. Alongside core server maintenance and Microsoft 365 user administration, I oversaw the technical side of the CCTV system. Working closely with HR on footage audits and reporting, I expanded camera coverage, eliminated blind spots, and resolved technical faults to help secure the entire facility.',
         'about.job4.role': 'Cable Technician ~ Team Leader ~ Operations Manager',
         'about.job4.desc': 'As Operations Manager at Techno Security Systems from 2018 to 2022, I worked closely with the Managing Director to drive operational success, client satisfaction, and strategic process improvements. I oversaw projects from initial planning through handover, ensuring timely installations and efficient workflows. My work covered major international and national security and network infrastructure projects, including Dormakaba access control for Marriott Guyana and Ramada Hotel Guyana with NetBryd, infrastructure for Berg en Dal Resort, Webhelp, and Bol.com call centers, and CCTV and access control deployments for SZF and government organizations.',
+        'about.highlights.heading': 'Key Projects & Achievements',
+        'about.torarica.1.title': 'Simphony KDS & Cloud Migration',
+        'about.torarica.1.desc': 'Deployed Kitchen Display Systems (KDS), prepared Simphony tablets and workstation terminals for major cloud migrations, and helped maintain smooth kitchen operations.',
+        'about.torarica.2.title': 'Smart Kitchen Integration',
+        'about.torarica.2.desc': 'Set up Amazon Echo Show 15 devices in the kitchen, giving executive chefs convenient digital access to recipes and image galleries.',
+        'about.torarica.3.title': 'Network & Infrastructure Expansion',
+        'about.torarica.3.desc': 'Expanded corporate Wi-Fi coverage by deploying access points across multiple locations and supported FTTH connectivity for commercial tenant units, including Galaxy.',
+        'about.torarica.4.title': 'Mangrove Apartments by Torarica',
+        'about.torarica.4.desc': 'Contributed to early IT planning and infrastructure discussions for the new long-stay luxury apartments.',
+        'about.ox88.1.title': 'FTTH & ADSL Fault Resolution',
+        'about.ox88.1.desc': "Led a frontline telecommunications troubleshooting crew, resolving complex ADSL and Fiber-to-the-Home (FTTH) connectivity issues for Telesur end users in coordination with Telesur's first-line helpdesk.",
+        'about.ox88.2.title': 'Telecom Infrastructure Maintenance',
+        'about.ox88.2.desc': 'Repaired street-level telecom distribution cabinets to support stable network performance and reduce client downtime.',
+        'about.ox88.3.title': 'Team Leadership & Development',
+        'about.ox88.3.desc': 'Trained and advised colleagues on hardware diagnostics, field protocols, and efficient troubleshooting practices.',
+        'about.ox88.4.title': 'Custom Connect Call Center Network Infrastructure',
+        'about.ox88.4.desc': "Led the end-to-end network infrastructure installation, directing technicians on structured cabling, cable trays, and hardware deployment. Built and equipped the server room from the ground up, then coordinated with Custom Connect's engineering team on final network configuration.",
+        'about.ox88.5.title': 'Teleperformance Site Support',
+        'about.ox88.5.desc': 'Supported site expansions and workstation changes across Teleperformance locations, while rapidly troubleshooting hardware and workstation issues.',
+        'about.interfarm.1.title': 'Systems Administration & Microsoft 365',
+        'about.interfarm.1.desc': 'Administered enterprise Microsoft environments, including Microsoft 365, managing user provisioning, access policies, permissions, and core cloud and server services.',
+        'about.interfarm.2.title': 'Network Architecture & Optimization',
+        'about.interfarm.2.desc': "Contributed technical recommendations to modernize and improve the company's internal network infrastructure and reliability.",
+        'about.interfarm.3.title': 'CCTV & Security Deployments',
+        'about.interfarm.3.desc': 'Worked closely with HR to plan and deliver CCTV installations and site security improvements.',
+        'about.interfarm.4.title': 'Infrastructure & Technical Support',
+        'about.interfarm.4.desc': 'Maintained backend servers and file services, and provided dependable first-line technical support to staff across the organization.',
+        'about.techno.1.title': 'International Hospitality & Access Control',
+        'about.techno.1.desc': 'Managed complex security and access control deployments, including dormakaba systems delivered in collaboration with NetBryd for leading regional hospitality properties such as Marriott Guyana and Ramada Hotel Guyana.',
+        'about.techno.2.title': 'Commercial & Corporate Deployments',
+        'about.techno.2.desc': 'Led large-scale security infrastructure and installation projects for corporate clients and resorts, including Berg en Dal Resort in Suriname, Webhelp, Bol.com, and SZF.',
+        'about.techno.3.title': 'Government & Institutional Projects',
+        'about.techno.3.desc': 'Oversaw technical planning and secure delivery of security system deployments across government offices and national institutions, including SZF.',
+        'about.techno.4.title': 'Operational Leadership',
+        'about.techno.4.desc': 'Worked directly with the company director to manage projects from planning through delivery, including resource allocation, cross-functional team coordination, and client stakeholder communication.',
         'about.eduTitle': 'UNASAT – Bachelor of Science in ICT',
         'about.secondarySchool': 'VWO – Mr. Dr. J.C. de Miranda Lyceum',
         'about.secondarySpecialty': 'Specialty: Accountancy',
@@ -72,6 +111,7 @@ const translations = {
         'about.interest3': 'Tinkering 🛠',
         'about.interest4': 'Soccer ⚽',
         'work.title': 'Selected Projects',
+        'work.gallery.hint': 'Curious how it all came together? Open any project to step inside the gallery.',
         'work.project1.title': 'Smart Traffic Lights',
         'work.project1.desc': 'An intelligent traffic regulation prototype designed for Paramaribo, utilizing ESP32 microcontrollers and IR sensors to optimize traffic flow.',
         'work.project1.tech': 'C++ | ESP32 | IoT | UNASAT',
@@ -135,15 +175,19 @@ const translations = {
         'nav.about': 'Over',
         'nav.work': 'Werk',
         'nav.contact': 'Contact',
+        'nav.menu': 'Menu',
+        'nav.toggle': 'Navigatie openen of sluiten',
         'hero.role': 'ICT-professional en systeembeheerder',
-        'hero.greeting': 'Hallo! welcome in mijn portfolio, mijn naam is',
+        'hero.greeting': 'Hallo! Mijn naam is',
         'hero.intro.welcome': 'Welkom! Fijn dat je een kijkje komt nemen.',
         'hero.intro.text1.before': 'Gedreven door een grote nieuwsgierigheid naar hoe complexe systemen achter de schermen met elkaar verbonden zijn en werken, is mijn reis in de IT uitgegroeid tot een gerichte passie voor ',
         'hero.intro.text1.focus': 'Systeem- en Netwerktechniek',
         'hero.intro.text1.after': ' en bedrijfsinfrastructuur.',
         'hero.intro.text2': 'Van het beveiligen van kritieke bedrijfsnetwerken en optimaliseren van intensieve systeemactiviteiten tot het ontwerpen van technische oplossingen op maat: ik richt me op betrouwbare, krachtige oplossingen die in de praktijk werken.',
         'hero.intro.callout': 'Bekijk hieronder mijn uitgelichte projecten of ontdek meer over mijn professionele achtergrond.',
+        'hero.intro.trigger': 'Ontdek mijn professionele verhaal',
         'hero.aboutButton': 'Lees Mijn Verhaal',
+        'hero.cvButton': 'Bekijk Mijn CV',
         'hero.badge1': 'IT-specialist',
         'hero.badge2': 'Infrastructuur- en netwerkengineer',
         'hero.badge3': 'SNE-student',
@@ -167,13 +211,48 @@ const translations = {
         'about.workExperience': 'Werkervaring',
         'about.year.today': '2025 - Heden',
         'about.job1.role': 'IT-helpdeskmedewerker',
-        'about.job1.desc': 'Veelzijdige IT-supportprofessional met ervaring die verder gaat dan standaard eerstelijns probleemoplossing. Bewezen ervaring met ondersteuning van geavanceerd infrastructuurbeheer, het opstellen van trainingsdocumentatie en het stimuleren van gebruikersadoptie van nieuwe technologie. Ruime ervaring in veeleisende IT-omgevingen binnen de hospitalitysector, met directe eerste-lijn ondersteuning tijdens grote bedrijfsveranderingen, waaronder migraties naar Opera Cloud en SharePoint. Ik heb een sterke zakelijke instelling ontwikkeld en stem dagelijkse IT-werkzaamheden af op organisatiedoelen, gestructureerde uitvoering en strategische visie.',
+        'about.job1.desc': 'Veelzijdige IT-supportprofessional met ervaring die verder gaat dan standaard eerstelijns probleemoplossing. Bewezen ervaring met ondersteuning van geavanceerd infrastructuurbeheer, het opstellen van trainingsdocumentatie en het stimuleren van gebruikersadoptie van nieuwe technologie. Ruime ervaring in veeleisende IT-omgevingen binnen de hospitalitysector, met directe ondersteuning tijdens grote bedrijfsveranderingen, waaronder migraties naar Opera Cloud, NetSuite en SharePoint. Ik heb een sterke zakelijke instelling ontwikkeld en stem dagelijkse IT-werkzaamheden af op organisatiedoelen, gestructureerde uitvoering en strategische visie.',
         'about.job2.role': 'Technisch teamleider infrastructuur, intern IT-advies en besluitvorming',
         'about.job2.desc': 'Als IT-teamleider bij OX88 gaf ik leiding aan een technisch team dat verantwoordelijk was voor het installeren, beheren en onderhouden van complete IT- en telecominfrastructuren voor klanten. Met mijn telecomachtergrond leidde ik samen met Telesur een gespecialiseerd storingsteam voor ADSL- en Fiber to the Home-installaties (FTTH) en werkzaamheden in wijkverdeelkasten (KVD’s). Daarnaast trainde en begeleidde ik teamleden en verbeterde ik voortdurend technische werkprocessen om sneller oplossingen van hogere kwaliteit te leveren.',
         'about.job3.role': 'Systeemoperator ~ Systeembeheerder',
         'about.job3.desc': 'Ik speelde een actieve rol in het moderniseren en uitbreiden van de IT-infrastructuur van het bedrijf. Naast serveronderhoud en gebruikersbeheer in Microsoft 365 hield ik toezicht op de technische kant van het CCTV-systeem. In nauwe samenwerking met HR, dat het systeem gebruikte voor beeldcontroles en rapportages, breidde ik de cameradekking uit, verwijderde ik blinde vlekken en verholp ik technische storingen om de volledige locatie te beveiligen.',
         'about.job4.role': 'Kabelmonteur ~ Teamleider ~ Operationeel manager',
         'about.job4.desc': 'Als operationeel manager bij Techno Security Systems werkte ik van 2018 tot 2022 nauw samen met de Managing Director aan operationele resultaten, klanttevredenheid en strategische procesverbeteringen. Ik begeleidde projecten van planning tot oplevering, zorgde voor tijdige installaties en verbeterde de efficiëntie. Mijn werk omvatte grote nationale en internationale beveiligings- en netwerkinfrastructuurprojecten, waaronder Dormakaba-toegangscontrole bij Marriott Guyana en Ramada Hotel Guyana met NetBryd, infrastructuur bij Berg en Dal Resort en callcenters van Webhelp en Bol.com, en CCTV- en toegangscontroleprojecten voor SZF en overheidsinstellingen.',
+        'about.highlights.heading': 'Belangrijkste projecten en prestaties',
+        'about.torarica.1.title': 'Simphony KDS en cloudmigratie',
+        'about.torarica.1.desc': 'Keukendisplaysystemen (KDS) geïnstalleerd en Simphony-tablets en werkstations voorbereid op grote cloudmigraties, zodat de keukenwerkzaamheden soepel konden doorgaan.',
+        'about.torarica.2.title': 'Slimme keukenintegratie',
+        'about.torarica.2.desc': 'Amazon Echo Show 15-apparaten in de keuken geïnstalleerd, zodat chef-koks digitaal recepten en fotogalerijen kunnen raadplegen.',
+        'about.torarica.3.title': 'Uitbreiding van netwerk en infrastructuur',
+        'about.torarica.3.desc': 'De zakelijke wifi-dekking uitgebreid met accesspoints op meerdere locaties en FTTH-connectiviteit ondersteund voor commerciële huurunits, waaronder Galaxy.',
+        'about.torarica.4.title': 'Mangrove Apartments by Torarica',
+        'about.torarica.4.desc': 'Bijgedragen aan de eerste IT-planning en infrastructuurbesprekingen voor de nieuwe luxeappartementen voor langdurig verblijf.',
+        'about.ox88.1.title': 'FTTH- en ADSL-storingen oplossen',
+        'about.ox88.1.desc': 'Een eerstelijns telecomstoringsploeg geleid en complexe ADSL- en Fiber-to-the-Home-problemen (FTTH) voor Telesur-klanten opgelost in samenwerking met de eerstelijnshelpdesk van Telesur.',
+        'about.ox88.2.title': 'Onderhoud van telecominfrastructuur',
+        'about.ox88.2.desc': 'Telecomverdeelkasten langs de weg gerepareerd om netwerkprestaties te stabiliseren en uitvaltijd voor klanten te beperken.',
+        'about.ox88.3.title': 'Teamleiding en ontwikkeling',
+        'about.ox88.3.desc': 'Collega’s getraind en geadviseerd over hardwarediagnose, veldprocedures en efficiënte probleemoplossing.',
+        'about.ox88.4.title': 'Netwerkinfrastructuur Custom Connect-callcenter',
+        'about.ox88.4.desc': 'De volledige netwerkinstallatie geleid en technici aangestuurd bij gestructureerde bekabeling, kabelgoten en hardwareplaatsing. De serverruimte vanaf de basis opgebouwd en ingericht, en daarna met het engineeringteam van Custom Connect de definitieve netwerkconfiguratie afgestemd.',
+        'about.ox88.5.title': 'Ondersteuning van Teleperformance-locaties',
+        'about.ox88.5.desc': 'Uitbreidingen en aanpassingen van werkplekken op Teleperformance-locaties ondersteund en hardware- en werkplekproblemen snel opgelost.',
+        'about.interfarm.1.title': 'Systeembeheer en Microsoft 365',
+        'about.interfarm.1.desc': 'Microsoft-omgevingen binnen het bedrijf beheerd, waaronder Microsoft 365, met verantwoordelijkheid voor gebruikersbeheer, toegangsbeleid, machtigingen en essentiële cloud- en serverservices.',
+        'about.interfarm.2.title': 'Netwerkarchitectuur en optimalisatie',
+        'about.interfarm.2.desc': 'Technische aanbevelingen gedaan om de interne netwerkinfrastructuur te moderniseren en de betrouwbaarheid te verbeteren.',
+        'about.interfarm.3.title': 'CCTV- en beveiligingsinstallaties',
+        'about.interfarm.3.desc': 'Nauw met HR samengewerkt bij de planning en uitvoering van CCTV-installaties en verbeteringen aan de terreinbeveiliging.',
+        'about.interfarm.4.title': 'Infrastructuur en technische ondersteuning',
+        'about.interfarm.4.desc': 'Back-endservers en bestandsservices onderhouden en betrouwbare eerstelijns technische ondersteuning aan medewerkers geboden.',
+        'about.techno.1.title': 'Internationale hospitality en toegangscontrole',
+        'about.techno.1.desc': 'Complexe beveiligings- en toegangscontroleprojecten beheerd, waaronder dormakaba-systemen in samenwerking met NetBryd voor regionale hotels zoals Marriott Guyana en Ramada Hotel Guyana.',
+        'about.techno.2.title': 'Commerciële en zakelijke projecten',
+        'about.techno.2.desc': 'Grootschalige beveiligingsinfrastructuur en installaties geleid voor zakelijke klanten en resorts, waaronder Berg en Dal Resort in Suriname, Webhelp, Bol.com en SZF.',
+        'about.techno.3.title': 'Overheids- en institutionele projecten',
+        'about.techno.3.desc': 'De technische planning en veilige uitvoering van beveiligingsinstallaties bij overheidskantoren en nationale instellingen begeleid, waaronder SZF.',
+        'about.techno.4.title': 'Operationeel leiderschap',
+        'about.techno.4.desc': 'Rechtstreeks met de bedrijfsdirecteur samengewerkt aan projectbeheer van planning tot oplevering, waaronder middelenverdeling, coördinatie van multidisciplinaire teams en communicatie met opdrachtgevers.',
         'about.eduTitle': 'UNASAT – Bachelor of Science in ICT',
         'about.secondarySchool': 'VWO – Mr. Dr. J.C. de Miranda Lyceum',
         'about.secondarySpecialty': 'Specialisatie: Accountancy',
@@ -199,6 +278,7 @@ const translations = {
         'about.interest3': 'Knutselen 🛠',
         'about.interest4': 'Voetbal ⚽',
         'work.title': 'Geselecteerde Projecten',
+        'work.gallery.hint': 'Benieuwd hoe het is gemaakt? Open een project en ontdek de galerij.',
         'work.project1.title': 'Slimme Verkeerslichten',
         'work.project1.desc': 'Een prototype voor intelligente verkeersregeling voor Paramaribo, met ESP32-microcontrollers en IR-sensoren om de doorstroming te optimaliseren.',
         'work.project1.tech': 'C++ | ESP32 | IoT | UNASAT',
@@ -240,7 +320,7 @@ const translations = {
         'work.issuedByDecibel': 'Uitgegeven door: Decibel Corporation 2025',
         'work.modal.heading': 'Projectoverzicht en uitvoering',
         'work.gallery.empty': 'Er zijn geen afbeeldingen beschikbaar voor dit project.',
-        'contact.title': 'Neem Contact Op Met Mij!',
+        'contact.title': 'Neem Contact Op',
         'contact.subtitle': 'Als je vragen hebt, projectideeën of mogelijke samenwerkingen, stuur gerust een bericht. Laten we samen iets geweldigs bouwen.',
         'contact.email.label': 'E-mail:',
         'contact.phone.label': 'Telefoon:',
@@ -281,6 +361,13 @@ function translatePage(lang) {
         }
     });
 
+    document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
+        const key = el.getAttribute('data-i18n-aria-label');
+        if (Object.prototype.hasOwnProperty.call(dictionary, key)) {
+            el.setAttribute('aria-label', dictionary[key]);
+        }
+    });
+
     document.querySelectorAll('[data-i18n-full-desc]').forEach(el => {
         const key = el.getAttribute('data-i18n-full-desc');
         if (Object.prototype.hasOwnProperty.call(dictionary, key)) {
@@ -297,6 +384,113 @@ function translatePage(lang) {
 
 window.addEventListener('DOMContentLoaded', () => {
     const fadeElements = document.querySelectorAll('.fade-init');
+    const nav = document.querySelector('nav');
+    const menuToggle = nav?.querySelector('.menu-toggle');
+    const navLinks = nav?.querySelector('.nav-links');
+
+    if (nav && menuToggle && navLinks) {
+        const closeMenu = () => {
+            nav.classList.remove('menu-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        };
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+            nav.classList.toggle('menu-open', !isOpen);
+            menuToggle.setAttribute('aria-expanded', String(!isOpen));
+        });
+        navLinks.addEventListener('click', event => {
+            if (event.target.closest('a')) closeMenu();
+        });
+        document.addEventListener('click', event => {
+            if (!nav.contains(event.target)) closeMenu();
+        });
+        window.addEventListener('keydown', event => {
+            if (event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+                closeMenu();
+                menuToggle.focus();
+            }
+        });
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) closeMenu();
+        });
+    }
+
+    const profilePicture = document.querySelector('.bio-image-container');
+    if (profilePicture) {
+        let floatingPicture = null;
+        let scrollFrame = 0;
+
+        const updateFloatingPicture = () => {
+            scrollFrame = 0;
+            const navBottom = nav?.getBoundingClientRect().bottom ?? 0;
+            const triggerPoint = navBottom + 12;
+            const pictureTop = profilePicture.getBoundingClientRect().top;
+
+            if (!floatingPicture && pictureTop <= triggerPoint) {
+                const rect = profilePicture.getBoundingClientRect();
+                floatingPicture = profilePicture.cloneNode(false);
+                floatingPicture.classList.remove('is-pinned-origin');
+                floatingPicture.classList.add('profile-scroll-portrait');
+                floatingPicture.setAttribute('aria-hidden', 'true');
+                floatingPicture.style.left = `${rect.left}px`;
+                floatingPicture.style.top = `${rect.top}px`;
+                floatingPicture.style.width = `${rect.width}px`;
+                floatingPicture.style.height = `${rect.height}px`;
+                document.body.appendChild(floatingPicture);
+                profilePicture.classList.add('is-pinned-origin');
+                requestAnimationFrame(() => floatingPicture?.classList.add('is-pinned'));
+            } else if (floatingPicture && pictureTop > triggerPoint + 12) {
+                floatingPicture.remove();
+                floatingPicture = null;
+                profilePicture.classList.remove('is-pinned-origin');
+            }
+        };
+
+        const schedulePictureUpdate = () => {
+            if (!scrollFrame) scrollFrame = requestAnimationFrame(updateFloatingPicture);
+        };
+
+        window.addEventListener('scroll', schedulePictureUpdate, { passive: true });
+        window.addEventListener('resize', schedulePictureUpdate);
+        schedulePictureUpdate();
+    }
+
+    const introShell = document.querySelector('.hero-intro-shell');
+    const introRegion = introShell?.closest('.home-hero');
+    const introTrigger = introShell?.querySelector('.hero-intro-trigger');
+    const introCard = introShell?.querySelector('.hero-intro-card');
+
+    if (introShell && introRegion && introTrigger && introCard) {
+        let pinnedOpen = false;
+        let closeTimer;
+        const setIntroOpen = open => {
+            introShell.classList.toggle('is-open', open);
+            introTrigger.setAttribute('aria-expanded', String(open));
+            introCard.setAttribute('aria-hidden', String(!open));
+        };
+
+        introShell.addEventListener('pointerenter', () => {
+            clearTimeout(closeTimer);
+            setIntroOpen(true);
+        });
+        introRegion.addEventListener('pointerleave', () => {
+            clearTimeout(closeTimer);
+            closeTimer = setTimeout(() => {
+                if (!pinnedOpen && !introRegion.matches(':hover') && !introRegion.contains(document.activeElement)) {
+                    setIntroOpen(false);
+                }
+            }, 900);
+        });
+        introShell.addEventListener('focusin', () => setIntroOpen(true));
+        introRegion.addEventListener('focusout', event => {
+            if (!pinnedOpen && !introRegion.contains(event.relatedTarget)) setIntroOpen(false);
+        });
+        introTrigger.addEventListener('click', () => {
+            pinnedOpen = !pinnedOpen;
+            setIntroOpen(pinnedOpen);
+        });
+    }
 
     setTimeout(() => {
         fadeElements.forEach(el => {
